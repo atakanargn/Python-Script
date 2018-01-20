@@ -1,0 +1,2 @@
+# Yardım komutu verdiniz.
+# Ne konuda yardımcı olmamı istersiniz ?
