@@ -15,4 +15,9 @@ pip install -r requirements.txt
 
 ### 3. Telegram Botu
 * Telegramda BotFather ile oluşturulan botu API_KEY yardımıyla kontrol etmeye yarayan script.
+* python-telegram-bot kütüphanesi kullanıldı.
 * Detaylar TelegramBOT isimli klasörde mevcut.
+
+### 4. NTV Haber sitesinden haber çekme
+* NTV Haber sitesinden Python dosyasında girilen kategoriye göre haber çekmek.
+* BeatifulSoup ve Urllib kütüphaneleri kullanıldı.
