@@ -19,5 +19,5 @@ pip install -r requirements.txt
 * Detaylar TelegramBOT isimli klasörde mevcut.
 
 ### 4. NTV Haber sitesinden haber çekme
-* NTV Haber sitesinden Python dosyasında girilen kategoriye göre haber çekmek.
+* NTV Haber sitesinden Python dosyasında girilen kategoriye göre haber çeker ve kategori isminde klasör oluşturup haberleri isimleri ile o klasöre kaydeder.
 * BeatifulSoup ve Urllib kütüphaneleri kullanıldı.
