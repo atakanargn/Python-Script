@@ -1,6 +1,6 @@
 # Python Scriptlerim
 
-## Scriptler için gereken kütüphaneleri Terminale veya Komut satırına aşağıdaki komutu vererek indirebilirsiniz
+### Scriptler için gereken kütüphaneleri Terminale veya Komut satırına aşağıdaki komutu vererek indirebilirsiniz
 ```bash
 pip install -r requirements.txt
 ```
