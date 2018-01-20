@@ -11,3 +11,8 @@ pip install -r requirements.txt
 
 ### 2. Kim milyoner olmak ister ?
 * sorular.txt adlı dosya içinden rastgele soru çekerek çalışan bir yarışma scripti.
+* Birçok eksik özellik mevcut zamanla eklenecek.
+
+### 3. Telegram Botu
+* Telegramda BotFather ile oluşturulan botu API_KEY yardımıyla kontrol etmeye yarayan script.
+* Detaylar TelegramBOT isimli klasörde mevcut.
