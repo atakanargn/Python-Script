@@ -21,3 +21,7 @@ pip install -r requirements.txt
 ### 4. NTV Haber sitesinden haber çekme
 * NTV Haber sitesinden Python dosyasında girilen kategoriye göre haber çeker ve kategori isminde klasör oluşturup haberleri isimleri ile o klasöre kaydeder.
 * BeatifulSoup ve Urllib kütüphaneleri kullanıldı.
+
+### 5. Anime Notifier
+* dizimob adlı internet sitesinden, metin belgesine yazılan animenin yeni bölümü var mı diye kontrol eder. Yeni bölüm varsa pushetta adlı mobil bildirim uygulaması ile kullanıcıya bildirim gönderir.
+* BeautifulSoup4 ve Pushetta kütüphaneleri kullanıldı.
