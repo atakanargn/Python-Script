@@ -2,10 +2,11 @@
 from pushetta import Pushetta
 from bs4 import BeautifulSoup
 import requests
+from os import getcwd
 
 # Pushetta için ApiKey'imizi buraya yazıyoruz
-API_KEY="PUSHETTA-API-KEY-HERE"
-kanal="OLUSTURULAN-KANALIN-ADI"
+API_KEY="API-KEY-HERE"
+kanal="Anime Bildirim"
 # bildirim göndermek için Pushetta nesnesi oluşturduk
 bildirim=Pushetta(API_KEY)
 # Örnek kullanım
@@ -28,7 +29,7 @@ for element in A:
 source = BeautifulSoup(content, "html.parser")
 
 # animeler.txt okuma modunda dosyasını açtık
-animeDosya=open("animeler.txt","r")
+animeDosya=open(str(getcwd())+"/animeler.txt","r")
 # tüm satırları diziye atadık
 animeler = animeDosya.readlines()
 # ve dosyayı runtime hataları almamak için kapattık.
@@ -59,8 +60,17 @@ for element in A:
             # "3.Sezon  34. Bölüm" << bunun gibi bir String bunu işleme sokup sadece 34 sayısını almalıyız
             # ". Bölüm" 7 karakter o yüzden, en sondan 7 karakter hariç bi daha atamalıyız [:-7] ile
             guncelBolum = A[say+1].text.strip()[:-7]
-            # "3.Sezon  34" kaldı, bunuda sondan sadece 3 karakter alalım
-            guncelBolum = guncelBolum[-3:]
+            # "3.Sezon  34" kaldı, bunuda sondan sadece 4 karakter alalım
+            guncelBolum = guncelBolum[-4:]
+            # Içinde harf veya karakter varsa temizleyelim
+            alfabe = ['a','b','c','d','e','f','g',
+                      'h','i','j','k','l','m','n','o','p','r',
+                      's','t','u','v','y','z','x','q','w','.',
+                      ',',';',':','-','/','*','+']
+            guncelBolum = guncelBolum.lower()
+            for harf in alfabe:
+                if harf in guncelBolum:
+                    guncelBolum=guncelBolum.replace(harf," ")
             # Boşlukları temizleyelim
             guncelBolum = guncelBolum.strip()
             # Eğer guncelBolum, animeler.txt içindeki dosyaya eşit veya küçük değilse yani sadece büyükse
@@ -71,7 +81,7 @@ for element in A:
                 animeBolum[animeAd.index(anime)]=guncelBolum
 # animeler.txt aç
 # Yeni değerlerle, baştan yaz
-animeDosya = open("animeler.txt","w")
+animeDosya = open(str(getcwd())+"/animeler.txt","w")
 for anime in animeAd:
     animeDosya.write(anime+"<:>"+animeBolum[animeAd.index(anime)]+"\n")
 animeDosya.close()
