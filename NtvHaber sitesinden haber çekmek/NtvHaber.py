@@ -95,7 +95,8 @@ for sayfa in range(1,sayfaSayi+1,1):
             #Dosyayı kapattık
             dosya.close()
             print("HABER KAYDEDİLDİ!!!")
-        except AttributeError:
+        except AttributeError as e:
+            print(e)
             #Hata vermesi durumunda hiç birşey olmamış gibi devam etmesini sağladık
             #(DAHA SONRA HATALAR DÜZELTİLECEK)
-            continue
+            #continue

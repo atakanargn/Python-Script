@@ -1,0 +1,3 @@
+KOMUT SATIRINDA
+    pip install openpyxl
+    pip install smtplib
