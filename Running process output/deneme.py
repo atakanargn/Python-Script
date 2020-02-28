@@ -14,3 +14,6 @@ def baslat(mlist):
     for line in islem(mlist):
         gelenDeger = line.decode("utf8")
         print(gelenDeger)
+
+while 1:
+    baslat(["bash" ,"yaz.sh"])

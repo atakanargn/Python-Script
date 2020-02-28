@@ -76,7 +76,7 @@ for element in A:
             # Eğer guncelBolum, animeler.txt içindeki dosyaya eşit veya küçük değilse yani sadece büyükse
             if(not(guncelBolum<=animeBolum[animeAd.index(anime)]) ):
                 # Anime adı ve bölüm sayısını, belirlenen kanala bildirim olarak gönder
-                bildirim.pushMessage("Anime Bildirim",anime+" animesinin yeni bölümü gelmiş!\n"+guncelBolum+".Bölüm!")
+                print("Anime Bildirim",anime+" animesinin yeni bölümü gelmiş!\n"+guncelBolum+".Bölüm!")
                 # Bölümler dizisindeki değeri güncelle
                 animeBolum[animeAd.index(anime)]=guncelBolum
 # animeler.txt aç
