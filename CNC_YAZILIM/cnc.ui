@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>291</width>
+    <height>314</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QComboBox" name="cmbPort">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>151</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>port</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>59</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Seri port</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnBaglan">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>10</y>
+      <width>111</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Bağlan</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnKes">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>30</y>
+      <width>111</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Bağlantıyı kes</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnHome">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>140</y>
+      <width>71</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>HOME</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnYukari">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>60</y>
+      <width>81</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>YUKARI</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnAsagi">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>150</y>
+      <width>81</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>AŞAĞI</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnSaga">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>100</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>SAĞA</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnSola">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>100</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>SOLA</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnUcYukari">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>60</y>
+      <width>81</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>KALEM
+YUKARI</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnUcAsagi">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>130</y>
+      <width>81</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>KALEM
+AŞAĞI</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txtDosya">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>220</y>
+      <width>131</width>
+      <height>23</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>200</y>
+      <width>59</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Dosya</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnBaslat">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>200</y>
+      <width>81</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>BAŞLAT</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnDurdur">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>220</y>
+      <width>81</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>DURDUR</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="cmbAdimHiz">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>71</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>0.001</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0.010</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0.100</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Adım(inch)</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnDosyaSec">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>200</y>
+      <width>51</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Dosya
+Seç</string>
+    </property>
+   </widget>
+   <widget class="QProgressBar" name="ilerleme">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>270</y>
+      <width>271</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>250</y>
+      <width>59</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Ilerleme</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>cmbPort</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>getText()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>35</x>
+     <y>39</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>77</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cmbAdimHiz</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>getSpeed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>57</x>
+     <y>90</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>61</x>
+     <y>109</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnBaglan</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>baglan()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>192</x>
+     <y>12</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>222</x>
+     <y>2</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnKes</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>baglantiKes()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>241</x>
+     <y>45</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>287</x>
+     <y>57</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnUcYukari</sender>
+   <signal>pressed()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>ucYukari()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>266</x>
+     <y>105</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>289</x>
+     <y>106</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnUcAsagi</sender>
+   <signal>pressed()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>ucAsagi()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>238</x>
+     <y>147</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>153</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnYukari</sender>
+   <signal>pressed()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>yukari()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>143</x>
+     <y>72</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>94</x>
+     <y>73</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnAsagi</sender>
+   <signal>pressed()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>asagi()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>156</x>
+     <y>163</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>190</x>
+     <y>165</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnSola</sender>
+   <signal>pressed()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sola()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>102</x>
+     <y>131</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>84</x>
+     <y>130</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnSaga</sender>
+   <signal>pressed()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>saga()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>175</x>
+     <y>118</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>193</x>
+     <y>118</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnHome</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>home()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>58</x>
+     <y>178</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>88</x>
+     <y>173</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnDosyaSec</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>dosyaSec()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>176</x>
+     <y>231</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>178</x>
+     <y>248</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnBaslat</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>baslat()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>230</x>
+     <y>209</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>198</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnDurdur</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>durdur()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>261</x>
+     <y>236</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>272</x>
+     <y>254</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>getText()</slot>
+  <slot>getSpeed()</slot>
+  <slot>baglan()</slot>
+  <slot>baglantiKes()</slot>
+  <slot>ucYukari()</slot>
+  <slot>ucAsagi()</slot>
+  <slot>yukari()</slot>
+  <slot>asagi()</slot>
+  <slot>sola()</slot>
+  <slot>saga()</slot>
+  <slot>home()</slot>
+  <slot>dosyaSec()</slot>
+  <slot>baslat()</slot>
+  <slot>durdur()</slot>
+ </slots>
+</ui>
