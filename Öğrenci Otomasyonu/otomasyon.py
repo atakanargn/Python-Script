@@ -1,32 +1,48 @@
 def ogrenciEkle():
-    veritabani = open("veri.txt","r")
+    veritabani = open("./veri.txt","r")
     ogrenciler = veritabani.readlines()
     veritabani.close()
 
     print("# Öğrenci; ")
     ad     = input("# Adı       : ")
     soyad  = input("# Soyadı    : ")
-    tcNo   = input("# TC Kimlik : ")
+    tcNo  = input("# TC Kimlik : ")
+    while len(tcNo)!=11:
+        print("# TC Kimlik numarası 11 haneli olmalıdır.")
+        tcNo   = input("# TC Kimlik : ")
     okulno = len(ogrenciler)+1
     print("# Okul numarası : "+str(okulno))
-    ogrenciler.append("{},{},{},{}\n".format(ad,soyad,tcNo,okulno))
+
+    for ogrenci in ogrenciler:
+        ad,soyad,tc,okulno = ogrenci.split(",")
+        okulno = okulno[:-1]
+        if(tc==tcNo):
+            print("# Bu kimlik numarasına sahip biri kayıtlı!")
+            veritabani.close()
+            return
+        else:
+            ogrenciler.append("{},{},{},{}\n".format(ad,soyad,tcNo,okulno))
+            break
 
     metin = ""
     for satir in ogrenciler:
         metin += satir
     
-    veritabani = open("veri.txt","w")
+    veritabani = open("./veri.txt","w")
     veritabani.write(metin)
     veritabani.close()
 
     print("# Öğrenci eklendi.")
 
 def ogrenciSil():
-    veritabani = open("veri.txt","r")
+    veritabani = open("./veri.txt","r")
     ogrenciler = veritabani.readlines()
     veritabani.close()
 
-    tcNo = input("# TC Kimlik : ")
+    tcNo  = input("# TC Kimlik : ")
+    while len(tcNo)!=11:
+        print("# TC Kimlik numarası 11 haneli olmalıdır.")
+        tcNo   = input("# TC Kimlik : ")
 
     for ogrenci in ogrenciler:
         ad,soyad,tc,okulno = ogrenci.split(",")
@@ -37,7 +53,7 @@ def ogrenciSil():
     for satir in ogrenciler:
         metin += satir
     
-    veritabani = open("veri.txt","w")
+    veritabani = open("./veri.txt","w")
     veritabani.write(metin)
     veritabani.close()
 
@@ -45,15 +61,21 @@ def ogrenciSil():
 
 def ogrenciGuncelle():
     print("### Öğrenci Güncelleme ###\n#")
-    veritabani = open("veri.txt","r")
+    veritabani = open("./veri.txt","r")
     ogrenciler = veritabani.readlines()
     veritabani.close()
 
     tcNo  = input("# TC Kimlik : ")
+    while len(tcNo)!=11:
+        print("# TC Kimlik numarası 11 haneli olmalıdır.")
+        tcNo   = input("# TC Kimlik : ")
     print("#\n# Yeni Bilgiler;")
     yAd     = input("# Ad        : ")
     ySoyad  = input("# Soyad     : ")
     yTcNo   = input("# TC Kimlik : ")
+    while len(yTcNo)!=11:
+        print("# TC Kimlik numarası 11 haneli olmalıdır.")
+        yTcNo   = input("# TC Kimlik : ")
     yOkulno = input("# Okul no   : ")
 
     for ogrenci in ogrenciler:
@@ -66,7 +88,7 @@ def ogrenciGuncelle():
     for satir in ogrenciler:
         metin += satir
     
-    veritabani = open("veri.txt","w")
+    veritabani = open("./veri.txt","w")
     veritabani.write(metin)
     veritabani.close()
 
@@ -75,7 +97,7 @@ def ogrenciGuncelle():
 def ogrenciListele():
     print("### Öğrenci Listeleme ###\n#")
 
-    veritabani = open("veri.txt","r")
+    veritabani = open("./veri.txt","r")
     ogrenciler = veritabani.readlines()
     veritabani.close()
 
